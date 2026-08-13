@@ -23,7 +23,7 @@
 <body>
 
   <h1>Gizlilik Politikası</h1>
-  <p class="updated">Son güncelleme: 12 Ağustos 2026</p>
+  <p class="updated">Son güncelleme: 14 Ağustos 2026</p>
 
   <p>
     ToGet There ("Uygulama"), kullanıcıların araç paylaşımı amacıyla güzergah
@@ -40,6 +40,8 @@
     <li><strong>Konum verisi:</strong> SOS butonunu tetiklediğinizde anlık konumunuz; harita üzerinden kalkış/varış noktası seçerken; sohbette karşı tarafla konum paylaştığınızda. Sürekli/arka planda konum takibi yapılmaz.</li>
     <li><strong>Yolculuk ve mesajlaşma verileri:</strong> oluşturduğunuz ilanlar/talepler, karşı tarafla yaptığınız yazılı/sesli sohbet, değerlendirme (puan/yorum) verileri.</li>
     <li><strong>Bildirim token'ı:</strong> push bildirim gönderebilmemiz için cihaz bildirim izni verirseniz cihazınıza özel bir token.</li>
+    <li><strong>Şikayet ve engelleme kayıtları:</strong> başka bir kullanıcıyı veya içeriği şikayet ettiğinizde ya da bir kullanıcıyı engellediğinizde oluşan kayıtlar.</li>
+    <li><strong>Hata/çökme verisi:</strong> uygulama beklenmedik şekilde kapanırsa, sorunu tespit edebilmemiz için cihaz modeli, işletim sistemi sürümü ve hatanın oluştuğu kod konumunu içeren teknik hata raporu.</li>
   </ul>
 
   <h2>Verilerin Kullanım Amacı</h2>
@@ -51,21 +53,32 @@
     incelenip onaylanması amacıyla kullanılır.
   </p>
 
+  <h2>İçerik Moderasyonu ve Şikayetler</h2>
+  <p>
+    Uygunsuz bir mesaj, ilan veya kullanıcıyla karşılaşırsanız uygulama
+    içinden şikayet edebilirsiniz. Ayrıca rahatsızlık veren bir kullanıcıyı
+    engelleyebilirsiniz; engellediğiniz kullanıcının tüm içerikleri (ilan,
+    talep) akışınızdan anında kaldırılır. Şikayetler tarafımızca en geç 24
+    saat içinde incelenir; kurallara aykırı bulunan içerik kaldırılır ve
+    ilgili kullanıcının hesabı askıya alınabilir.
+  </p>
+
   <h2>Verilerin Saklanması</h2>
   <p>
     Veriler Supabase (Postgres tabanlı bulut altyapısı) üzerinde saklanır.
     Bir yolculuğa ait sohbet (metin ve sesli mesajlar), yolculuk tamamlanıp
     karşılıklı değerlendirme yapıldığında veya en geç 72 saat içinde kalıcı
     olarak silinir. Reddedilen taleplere ait sohbetler 24 saat içinde silinir.
-    Diğer veriler hesabınız aktif olduğu sürece saklanır.
+    Diğer veriler hesabınız aktif olduğu sürece saklanır. Şikayet kayıtları,
+    incelemenin ve olası itirazların takibi için makul bir süre saklanır.
   </p>
 
   <h2>Üçüncü Taraf Hizmetler</h2>
   <p>
     Uygulama, veritabanı/kimlik doğrulama/depolama için Supabase, push
     bildirim gönderimi için Apple/Google'ın bildirim altyapısını (Expo Push
-    servisi üzerinden) kullanır. Reklam veya analitik amaçlı üçüncü taraf
-    takip servisi kullanılmaz.
+    servisi üzerinden), hata/çökme raporlama için Sentry kullanır. Reklam
+    veya analitik amaçlı üçüncü taraf takip servisi kullanılmaz.
   </p>
 
   <h2>Veri Paylaşımı</h2>
